@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: aqua;
+}
+
+a {
+    text-decoration: none;
+ }
+
+header {
+    padding: 3vw;
+    font-size: 1.3vw;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(12,12,12,0.7),rgba(12,12,12,1)),url(./media/spcace.jpg);
+    background-position: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5vw;
+    transition: .3s;
+}
+
+.float-left a{
+    font-size: 1.7vw;
+}
+.aqua {
+    color: aqua;
+}
+
+header nav ul a:hover {
+    color: aqua;
+}
+
+main h1 {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    font-size: 4vw;
+}
+
+.sect {
+    min-height: 100vh;
+    padding: 3vw 7vw;
+}
+
+.sectionHead {
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3vw 0;
+    padding: 2vw;
+    background-color: #333;
+    border-radius: 15px;
+    width: 95%;
+}
+
+.about-container .pic {
+    border-right: 1px solid aqua;
+}
+
+.about-container .pic img{
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: gray;
+    margin: 2vw 0 0 3vw;
+    width: 80%;
+}
+
+.about-container .text {
+    font-size: 1.4vw;
+    line-height: 2.1vw;
+    width: 60%;
+    padding: 0 4vw;
+    text-align: justify;
+}
+
+.about-container .text p {
+    margin-top: 3vw;
+}
+
+.edu {
+    min-height: 100vh;
+}
+
+.contact {
+    min-height: 100vh;
+    padding-top: 3vw;
+}
+
+.footer-bg {
+    background-image: linear-gradient(rgba(12,12,12,1),rgba(12,12,12,0.9)),url(./media/spcace.jpg);
+    /* background-position: center; */
+}
+
+.feedback {
+    padding: 0 25%;
+}
+
+.form {
+    margin-top: 3vw;
+    font-size: 1.5vw;
+}
+
+.form span {
+    color: white;
+}
+
+.feedback input {
+    font-size: 1.5rem;
+    margin-bottom: 1.5vw;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    color: gray;
+    outline: none;
+    background: none;
+    border-bottom: solid #728197;
+}
+
+.feedback textarea {
+    font-size: 1.3rem;
+    margin-top: 0.6vw;
+    color: gray;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: solid #728197;
+    width: 100%;
+}
+
+.submit {
+    text-align: center;
+    margin-block: 1vw;
+}
+
+.send {
+    width: 10%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color:grey;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1vw;
+    min-height: 12vw;
+    position: relative;
+}
+
+footer .address {
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+.socials {
+    margin-block: 1vw 2vw;
+}
+.socials ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.socials ul a {
+    padding-inline: 1vw;
+    color: white;
+    transition: .3s;
+}
+
+.socials ul a:hover {
+    color: aqua;
+}
+
+.cprt{
+    position: absolute;
+    bottom: 1vw;
+    right: 50%;
+    transform: translate(50%,50%);
+}
