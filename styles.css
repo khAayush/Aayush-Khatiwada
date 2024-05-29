@@ -32,13 +32,16 @@ header {
 }
 
 header nav {
-    /* position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 2vw 3vw;
+    z-index: 3;
+    transition: .3s;
 }
 
 header nav ul{
