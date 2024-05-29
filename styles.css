@@ -115,6 +115,34 @@ main h1 {
     min-height: 100vh;
 }
 
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 3vw 0;
+    padding: 2vw;
+    border-radius: 15px;
+    width: 95%;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 5%;
+    padding: 1vw;
+}
+
+.card .logo {
+    text-align: center;
+}
+
+.card .edu-info {
+    padding: 1vw;
+}
+
+.card ul {
+    line-height: 3vw;
+    padding: 1vw;
+}
+
 .contact {
     min-height: 100vh;
     padding-top: 3vw;
