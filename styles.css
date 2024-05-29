@@ -44,6 +44,14 @@ header nav {
     transition: .3s;
 }
 
+header .stick {
+    padding: 0.5vw 3vw;
+    background: rgba(128, 128, 128, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+}
+
 header nav ul{
     display: flex;
     list-style: none;
