@@ -188,3 +188,16 @@ footer {
     right: 50%;
     transform: translate(50%,50%);
 }
+
+.top-btn {
+    transition: 0.3s;
+    bottom: 3vw;
+    right: -3vw;
+    position: fixed;
+    z-index: 3;
+}
+
+.top-btn a {
+    color: aqua;
+    font-size: 1.7vw;
+}
