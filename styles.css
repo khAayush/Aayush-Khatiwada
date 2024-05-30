@@ -84,7 +84,7 @@ main h1 {
 
 .sect {
     min-height: 100vh;
-    padding: 3vw 7vw;
+    padding: 5vw 7vw;
 }
 
 .sectionHead {
@@ -140,6 +140,7 @@ main h1 {
 }
 
 .card {
+    width: 30%;
     background-color: #333;
     border-radius: 5%;
     padding: 1vw;
@@ -154,8 +155,9 @@ main h1 {
 }
 
 .card ul {
+    list-style: none;
+    font-size: 1.2vw;
     line-height: 3vw;
-    padding: 1vw;
 }
 
 .contact {
