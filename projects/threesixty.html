@@ -6,130 +6,120 @@
   <title>ThreeSixty | Aayush Khatiwada</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body>
+<body class="project-page">
 
 <div id="progress-bar"></div>
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
 
-<nav id="navbar">
-  <div class="container">
-    <a href="../index.html" class="nav-logo">AK<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-    <a href="mailto:khatiwadaaayush45@gmail.com" class="nav-cta">Hire Me</a>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+<nav class="pd-nav">
+  <a href="../index.html#projects" class="pd-nav-back">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+    Portfolio
+  </a>
+  <div class="pd-nav-actions">
+    <a href="https://github.com/khAayush/ThreeSixty" target="_blank" rel="noopener" class="pd-btn-code">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      Code
+    </a>
   </div>
 </nav>
 
-<div class="mobile-menu">
-  <a href="../index.html">Home</a>
-  <a href="../index.html#projects">Projects</a>
-  <a href="../index.html#contact">Contact</a>
-</div>
-
-<!-- Hero -->
-<div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(6,182,212,0.08) 100%), var(--bg);">
-  <div class="orb orb-purple" style="top:-100px;right:-100px;opacity:0.15;width:500px;height:500px;"></div>
-  <div class="container">
-    <a href="../index.html#projects" class="back-btn">← Back to Projects</a>
-    <div class="detail-meta">
-      <span class="detail-meta-chip">📦 Full-Stack</span>
-      <span class="detail-meta-chip">June 2026</span>
-      <span class="detail-meta-chip">MERN Stack</span>
-    </div>
-    <h1 class="detail-title reveal">ThreeSixty</h1>
-    <p style="color:var(--text-2);max-width:600px;font-size:1.1rem;" class="reveal reveal-delay-1">
-      IT Inventory Management &amp; Support Platform — an all-in-one organizational tool with real-time features.
-    </p>
-    <div class="detail-links reveal reveal-delay-2">
-      <a href="https://github.com/khAayush/ThreeSixty" target="_blank" rel="noopener" class="btn-primary">
-        View on GitHub
-        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
-    </div>
+<div class="pd-hero">
+  <div class="pd-status-row">
+<span class="pd-category">Full-Stack Web Application</span>
   </div>
+  <h1 class="pd-title reveal">ThreeSixty</h1>
+  <p class="pd-subtitle reveal">IT Inventory Management &amp; Support Platform — an all-in-one organisational tool with real-time chat, ticketing, and lost &amp; found management.</p>
+  <div class="pd-tags reveal">
+    <span class="pd-tag">MongoDB</span>
+    <span class="pd-tag">Express.js</span>
+    <span class="pd-tag">React</span>
+    <span class="pd-tag">Node.js</span>
+    <span class="pd-tag">Socket.IO</span>
+    <span class="pd-tag">Tailwind CSS</span>
+    <span class="pd-tag">Figma</span>
+  </div>
+  <div class="pd-cover"><img src="https://brandscope.com/wp-content/uploads/2023/09/Stock-Control-Vector-Image.webp" alt="ThreeSixty" /></div>
 </div>
 
-<!-- Stack badges -->
-<div style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;">
-  <div class="container">
-    <div class="project-stack">
-      <span class="stack-tag">MongoDB</span>
-      <span class="stack-tag">Express.js</span>
-      <span class="stack-tag">React</span>
-      <span class="stack-tag">Node.js</span>
-      <span class="stack-tag cyan">Socket.IO</span>
-      <span class="stack-tag cyan">Tailwind CSS</span>
-      <span class="stack-tag">Figma</span>
+<div class="pd-content-wrap">
+  <div>
+    <div class="pd-card reveal">
+      <div class="pd-card-header">
+        <span class="pd-card-icon pd-card-icon--amber">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+        </span>
+        <span class="pd-card-title">The Problem</span>
+      </div>
+      <p class="pd-card-body">Organisations often juggle multiple disconnected tools — spreadsheets for inventory, email threads for support requests, and manual registers for lost items. This fragmentation leads to administrative overhead, slow response times, and data inconsistencies.</p>
     </div>
-  </div>
-</div>
 
-<!-- Body -->
-<div class="container">
-  <div class="detail-body">
+    <div class="pd-card reveal">
+      <div class="pd-card-header">
+        <span class="pd-card-icon pd-card-icon--blue">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+        </span>
+        <span class="pd-card-title">The Solution</span>
+      </div>
+      <p class="pd-card-body">ThreeSixty consolidates inventory management, a support ticketing system, real-time staff chat, and a lost &amp; found module into a single cohesive dashboard. Role-based access ensures every stakeholder — admin, staff, and user — sees only what they need.</p>
+    </div>
 
-    <h2 class="reveal">Overview</h2>
-    <p class="reveal">
-      ThreeSixty is a comprehensive IT management platform built to help organizations manage their
-      hardware and software inventory alongside a full ticketing support system. The platform integrates
-      real-time chat and a lost &amp; found module into a single cohesive dashboard.
-    </p>
-
-    <h2 class="reveal">Problem</h2>
-    <p class="reveal">
-      Organizations often juggle multiple disconnected tools — spreadsheets for inventory, email threads
-      for support requests, and manual registers for lost items. ThreeSixty consolidates all of this
-      into one platform, reducing administrative overhead and improving response times.
-    </p>
-
-    <h2 class="reveal">Key Features</h2>
-    <ul class="reveal">
-      <li>Real-time inventory tracking with category, location, and status management</li>
-      <li>Ticketing system with priority levels, assignment, and status workflows</li>
-      <li>Live chat powered by Socket.IO for instant staff communication</li>
-      <li>Lost &amp; Found module with item reporting and claim management</li>
-      <li>Role-based access control (Admin, Staff, User)</li>
-      <li>Responsive dashboard designed in Figma with Tailwind CSS</li>
-    </ul>
-
-    <h2 class="reveal">Tech Stack</h2>
-    <p class="reveal">
-      The frontend is built in React with Tailwind CSS for rapid UI development, mirroring the
-      Figma prototypes. The backend uses Express.js on Node.js with MongoDB as the database.
-      Socket.IO handles all real-time communication channels, ensuring zero-latency chat and
-      live ticket updates.
-    </p>
-
-    <h2 class="reveal">Outcome</h2>
-    <p class="reveal">
-      ThreeSixty demonstrates full-stack capability — from database schema design to real-time
-      features to polished UI — completed as a final-year project at Herald College Kathmandu.
-    </p>
-
-  </div>
-</div>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <a href="../index.html" class="footer-logo">AK<span>.</span></a>
-      <p class="footer-copy">© 2026 Aayush Khatiwada</p>
-      <div class="footer-socials">
-        <a href="https://github.com/khAayush" target="_blank" rel="noopener" class="social-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
+    <div class="pd-card reveal">
+      <div class="pd-card-header">
+        <span class="pd-card-icon pd-card-icon--green">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </span>
+        <span class="pd-card-title">Key Features</span>
+      </div>
+      <div class="pd-features-grid">
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Real-time inventory tracking with category, location &amp; status</div>
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Ticketing system with priority levels and status workflows</div>
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Live chat powered by Socket.IO for instant staff communication</div>
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Lost &amp; Found module with item reporting and claim management</div>
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Role-based access control (Admin, Staff, User)</div>
+        <div class="pd-feature-item"><span class="pd-feature-dash">—</span>Responsive dashboard designed in Figma with Tailwind CSS</div>
       </div>
     </div>
   </div>
-</footer>
+
+  <aside>
+    <div class="pd-sidebar-section">
+      <div class="pd-sidebar-title">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+        Challenges
+      </div>
+      <div class="pd-sidebar-items">
+        <div class="pd-sidebar-item"><i class="pd-arrow-amber">→</i>Building a real-time chat system that scales with concurrent users across multiple rooms</div>
+        <div class="pd-sidebar-item"><i class="pd-arrow-amber">→</i>Designing a flexible RBAC system that cleanly separates Admin, Staff, and User permissions</div>
+        <div class="pd-sidebar-item"><i class="pd-arrow-amber">→</i>Keeping inventory state consistent across concurrent user sessions without race conditions</div>
+      </div>
+    </div>
+    <div class="pd-sidebar-section">
+      <div class="pd-sidebar-title">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+        Lessons
+      </div>
+      <div class="pd-sidebar-items">
+        <div class="pd-sidebar-item"><i class="pd-arrow-green">↑</i>Socket.IO namespaces and rooms simplify multi-channel real-time architecture significantly</div>
+        <div class="pd-sidebar-item"><i class="pd-arrow-green">↑</i>Early MongoDB schema design prevents expensive data migrations during later development</div>
+        <div class="pd-sidebar-item"><i class="pd-arrow-green">↑</i>A shared Figma design system reduces UI inconsistencies between prototype and implementation</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="pd-project-nav">
+  <div class="pd-nav-item pd-nav-item--empty">
+    <span class="pd-nav-label">← Previous</span>
+    <span class="pd-nav-name">—</span>
+  </div>
+  <a href="cnn-classifier.html" class="pd-nav-item pd-nav-item--next">
+    <span class="pd-nav-label">Next →</span>
+    <span class="pd-nav-name">CNN Plant Classifier</span>
+  </a>
+</div>
 
 <script src="../main.js"></script>
 </body>
