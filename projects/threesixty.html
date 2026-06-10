@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreeSixty | Aayush Khatiwada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo">AK<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:khatiwadaaayush45@gmail.com" class="nav-cta">Hire Me</a>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="../index.html">Home</a>
+  <a href="../index.html#projects">Projects</a>
+  <a href="../index.html#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(6,182,212,0.08) 100%), var(--bg);">
+  <div class="orb orb-purple" style="top:-100px;right:-100px;opacity:0.15;width:500px;height:500px;"></div>
+  <div class="container">
+    <a href="../index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="detail-meta">
+      <span class="detail-meta-chip">📦 Full-Stack</span>
+      <span class="detail-meta-chip">June 2026</span>
+      <span class="detail-meta-chip">MERN Stack</span>
+    </div>
+    <h1 class="detail-title reveal">ThreeSixty</h1>
+    <p style="color:var(--text-2);max-width:600px;font-size:1.1rem;" class="reveal reveal-delay-1">
+      IT Inventory Management &amp; Support Platform — an all-in-one organizational tool with real-time features.
+    </p>
+    <div class="detail-links reveal reveal-delay-2">
+      <a href="https://github.com/khAayush/ThreeSixty" target="_blank" rel="noopener" class="btn-primary">
+        View on GitHub
+        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Stack badges -->
+<div style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;">
+  <div class="container">
+    <div class="project-stack">
+      <span class="stack-tag">MongoDB</span>
+      <span class="stack-tag">Express.js</span>
+      <span class="stack-tag">React</span>
+      <span class="stack-tag">Node.js</span>
+      <span class="stack-tag cyan">Socket.IO</span>
+      <span class="stack-tag cyan">Tailwind CSS</span>
+      <span class="stack-tag">Figma</span>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="container">
+  <div class="detail-body">
+
+    <h2 class="reveal">Overview</h2>
+    <p class="reveal">
+      ThreeSixty is a comprehensive IT management platform built to help organizations manage their
+      hardware and software inventory alongside a full ticketing support system. The platform integrates
+      real-time chat and a lost &amp; found module into a single cohesive dashboard.
+    </p>
+
+    <h2 class="reveal">Problem</h2>
+    <p class="reveal">
+      Organizations often juggle multiple disconnected tools — spreadsheets for inventory, email threads
+      for support requests, and manual registers for lost items. ThreeSixty consolidates all of this
+      into one platform, reducing administrative overhead and improving response times.
+    </p>
+
+    <h2 class="reveal">Key Features</h2>
+    <ul class="reveal">
+      <li>Real-time inventory tracking with category, location, and status management</li>
+      <li>Ticketing system with priority levels, assignment, and status workflows</li>
+      <li>Live chat powered by Socket.IO for instant staff communication</li>
+      <li>Lost &amp; Found module with item reporting and claim management</li>
+      <li>Role-based access control (Admin, Staff, User)</li>
+      <li>Responsive dashboard designed in Figma with Tailwind CSS</li>
+    </ul>
+
+    <h2 class="reveal">Tech Stack</h2>
+    <p class="reveal">
+      The frontend is built in React with Tailwind CSS for rapid UI development, mirroring the
+      Figma prototypes. The backend uses Express.js on Node.js with MongoDB as the database.
+      Socket.IO handles all real-time communication channels, ensuring zero-latency chat and
+      live ticket updates.
+    </p>
+
+    <h2 class="reveal">Outcome</h2>
+    <p class="reveal">
+      ThreeSixty demonstrates full-stack capability — from database schema design to real-time
+      features to polished UI — completed as a final-year project at Herald College Kathmandu.
+    </p>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="../index.html" class="footer-logo">AK<span>.</span></a>
+      <p class="footer-copy">© 2026 Aayush Khatiwada</p>
+      <div class="footer-socials">
+        <a href="https://github.com/khAayush" target="_blank" rel="noopener" class="social-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>
