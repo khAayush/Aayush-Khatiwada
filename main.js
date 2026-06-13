@@ -85,22 +85,51 @@ const langObs = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 langFills.forEach(el => langObs.observe(el));
 
+// ---------- EmailJS Init ----------
+emailjs.init('QK4pfrVYwny2zwxpv'); // replace with your EmailJS public key
+
 // ---------- Contact Form Submit ----------
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
     const btn = contactForm.querySelector('.form-submit');
-    const orig = btn.innerHTML;
-    btn.textContent = 'Message sent!';
-    btn.style.background = '#34d399';
-    btn.style.color = '#000';
-    setTimeout(() => {
-      btn.innerHTML = orig;
-      btn.style.background = '';
-      btn.style.color = '';
-      contactForm.reset();
-    }, 3000);
+    const origHTML = btn.innerHTML;
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const templateParams = {
+      from_name: `${document.getElementById('fname').value.trim()} ${document.getElementById('lname').value.trim()}`.trim(),
+      from_email: document.getElementById('femail').value.trim(),
+      subject:    document.getElementById('fsubject').value.trim() || 'No subject',
+      message:    document.getElementById('fmessage').value.trim(),
+    };
+
+    emailjs.send('service_fuwk9oe', 'template_xeko9ig', templateParams)
+      .then(() => {
+        btn.textContent = 'Message sent!';
+        btn.style.background = '#34d399';
+        btn.style.color = '#000';
+        contactForm.reset();
+        setTimeout(() => {
+          btn.innerHTML = origHTML;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 3000);
+      })
+      .catch(() => {
+        btn.textContent = 'Failed — try again';
+        btn.style.background = '#f87171';
+        btn.style.color = '#000';
+        setTimeout(() => {
+          btn.innerHTML = origHTML;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 3000);
+      });
   });
 }
 
