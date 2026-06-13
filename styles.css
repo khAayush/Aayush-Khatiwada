@@ -14,14 +14,16 @@
   --text-500:    #71717a;
   --text-600:    #52525b;
 
-  --blue:        #ffc300;
-  --blue-400:    #ffd44d;
-  --blue-500:    #ffc300;
-  --blue-glow:   rgba(255,195,0,0.1);
-  --blue-border: rgba(255,195,0,0.4);
+  --gold:        #ffc300;
+  --gold-400:    #ffd44d;
+  --gold-500:    #ffc300;
+  --gold-glow:   rgba(255,195,0,0.1);
+  --gold-border: rgba(255,195,0,0.4);
 
   --emerald:     #34d399;
   --amber:       #fbbf24;
+  --wlv:         #2a75d3;
+  --hck:         #4caf50;
 
   --border:      rgba(255,255,255,0.08);
   --border-hov:  rgba(255,255,255,0.14);
@@ -68,7 +70,7 @@ button { cursor: pointer; font-family: inherit; }
 #progress-bar {
   position: fixed; top: 0; left: 0; z-index: 10000;
   height: 1px; width: 0;
-  background: var(--blue);
+  background: var(--gold);
 }
 
 /* ---------- Container ---------- */
@@ -108,7 +110,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 11px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--gold);
   margin-bottom: 16px;
   display: block;
 }
@@ -320,7 +322,7 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--text);
   margin-bottom: 32px;
 }
-.hero-name .blue-dot { color: var(--blue); }
+.hero-name .gold-dot { color: var(--gold); }
 
 .hero-divider {
   height: 1px;
@@ -581,12 +583,12 @@ button { cursor: pointer; font-family: inherit; }
   transition: border-color 0.25s, background 0.25s;
 }
 .cert-card:hover {
-  border-color: var(--blue-border);
+  border-color: var(--gold-border);
   background: var(--bg-card);
 }
 
 .cert-icon {
-  color: var(--blue);
+  color: var(--gold);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -630,8 +632,8 @@ button { cursor: pointer; font-family: inherit; }
   transition: color 0.2s, border-color 0.2s;
 }
 .cert-view:hover {
-  color: var(--blue-400);
-  border-color: var(--blue-border);
+  color: var(--gold-400);
+  border-color: var(--gold-border);
 }
 #awards {
   padding: clamp(96px,12vw,144px) var(--px);
@@ -667,8 +669,8 @@ button { cursor: pointer; font-family: inherit; }
 }
 .award-card:hover { background: var(--bg-card); }
 
-.award-card--emerald { border-top-color: var(--emerald); }
-.award-card--amber   { border-top-color: var(--amber); }
+.award-card--hck { border-top-color: var(--hck); }
+.award-card--wlv   { border-top-color: var(--wlv); }
 
 .award-body { flex: 1; }
 
@@ -700,8 +702,8 @@ button { cursor: pointer; font-family: inherit; }
   font-weight: 600;
   letter-spacing: 0.04em;
 }
-.award-badge--emerald { color: var(--emerald); }
-.award-badge--amber   { color: var(--amber); }
+.award-badge--hck { color: var(--hck); }
+.award-badge--wlv   { color: var(--wlv); }
 
 .edu-inner {
   max-width: var(--max-w);
@@ -725,7 +727,7 @@ button { cursor: pointer; font-family: inherit; }
 .edu-entry:first-child { border-top: 1px solid var(--border); }
 .edu-entry:hover {
   background: var(--bg-card);
-  border-left-color: var(--blue);
+  border-left-color: var(--gold);
 }
 
 .edu-entry-header {
@@ -743,7 +745,7 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .edu-entry-icon {
-  color: var(--blue);
+  color: var(--gold);
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -777,7 +779,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 13px;
   color: var(--text-500);
 }
-.edu-entry-meta-row svg { color: var(--blue); flex-shrink: 0; }
+.edu-entry-meta-row svg { color: var(--gold); flex-shrink: 0; }
 
 .edu-entry-divider {
   height: 1px;
@@ -819,7 +821,7 @@ button { cursor: pointer; font-family: inherit; }
   padding: 32px;
   transition: background 0.2s, border-color 0.2s;
 }
-.edu-cell:hover { background: var(--bg-card); border-top-color: var(--blue); }
+.edu-cell:hover { background: var(--bg-card); border-top-color: var(--gold); }
 #certificates .edu-cell { background: var(--bg); }
 #certificates .edu-cell:hover { background: var(--bg-card); }
 
@@ -829,7 +831,7 @@ button { cursor: pointer; font-family: inherit; }
 .edu-badge {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 12px; font-weight: 600;
-  color: var(--blue-400);
+  color: var(--gold-400);
   letter-spacing: 0.04em;
 }
 
@@ -874,7 +876,7 @@ button { cursor: pointer; font-family: inherit; }
   background: var(--bg);
   transition: border-color 0.3s;
 }
-.exp-item:hover .exp-dot { border-color: var(--blue); }
+.exp-item:hover .exp-dot { border-color: var(--gold); }
 
 .exp-card {
   border: 1px solid var(--border);
@@ -900,7 +902,7 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--text);
   margin-bottom: 4px;
 }
-.exp-company { font-size: 14px; color: var(--blue-400); }
+.exp-company { font-size: 14px; color: var(--gold-400); }
 .exp-meta {
   display: flex; flex-direction: column; gap: 4px;
   text-align: right;
@@ -969,9 +971,9 @@ button { cursor: pointer; font-family: inherit; }
   margin-bottom: 24px;
   transition: border-color 0.2s;
 }
-.skill-cell:hover .skill-icon-box { border-color: var(--blue-border); }
+.skill-cell:hover .skill-icon-box { border-color: var(--gold-border); }
 .skill-icon-box svg { color: var(--text-400); transition: color 0.2s; }
-.skill-cell:hover .skill-icon-box svg { color: var(--blue-400); }
+.skill-cell:hover .skill-icon-box svg { color: var(--gold-400); }
 
 .skill-cat-name {
   font-size: 12px;
@@ -1037,7 +1039,7 @@ button { cursor: pointer; font-family: inherit; }
 }
 .lang-fill {
   height: 100%;
-  background: var(--blue);
+  background: var(--gold);
   width: 0;
   transition: width 1s ease;
 }
@@ -1114,7 +1116,7 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--text);
   transition: color 0.2s;
 }
-.project-row:hover .project-title { color: var(--blue-400); }
+.project-row:hover .project-title { color: var(--gold-400); }
 .project-category {
   font-size: 13px; color: var(--text-500);
 }
@@ -1155,9 +1157,9 @@ button { cursor: pointer; font-family: inherit; }
   transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 .project-row:hover .project-arrow-btn {
-  border-color: var(--blue-border);
+  border-color: var(--gold-border);
   background: rgba(255,195,0,0.1);
-  color: var(--blue-400);
+  color: var(--gold-400);
 }
 
 /* ============================================================
@@ -1366,7 +1368,7 @@ body.project-page .mobile-menu { display: none !important; }
   letter-spacing: 0.18em; text-transform: uppercase;
 }
 .pd-status--live   { color: var(--emerald); }
-.pd-status--done   { color: var(--blue-400); }
+.pd-status--done   { color: var(--gold-400); }
 .pd-status--design { color: var(--amber); }
 .pd-status-sep {
   width: 4px; height: 4px; border-radius: 50%;
@@ -1441,7 +1443,7 @@ body.project-page .mobile-menu { display: none !important; }
 }
 .pd-card-icon { flex-shrink: 0; }
 .pd-card-icon--amber svg { color: var(--amber); }
-.pd-card-icon--blue  svg { color: var(--blue-400); }
+.pd-card-icon--gold  svg { color: var(--gold-400); }
 .pd-card-icon--green svg { color: var(--emerald); }
 .pd-card-title {
   font-size: 11px; font-weight: 700;
