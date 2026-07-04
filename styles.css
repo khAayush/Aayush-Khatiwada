@@ -232,19 +232,6 @@ button { cursor: pointer; font-family: inherit; }
   overflow: hidden;
 }
 
-/* Blue glow blob */
-.hero-glow {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px; height: 700px;
-  border-radius: 50%;
-  background: rgba(255,195,0,0.04);
-  filter: blur(140px);
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Top row */
 .hero-topbar {
   display: flex; align-items: flex-start; justify-content: space-between;

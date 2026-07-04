@@ -73,6 +73,98 @@ if (divider) {
   });
 }
 
+// ---------- Cursor particles (site-wide) ----------
+const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (hasFinePointer && !prefersReducedMotion) {
+  const canvas = document.createElement('canvas');
+  canvas.className = 'cursor-canvas';
+  // All styling inline so the effect never depends on stylesheet load/cache.
+  canvas.style.cssText =
+    'position:fixed;top:0;left:0;pointer-events:none;z-index:901;mix-blend-mode:screen;';
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let viewW = 0, viewH = 0;
+  const resizeCanvas = () => {
+    // CSS box and drawing buffer are sized from the same numbers, so canvas
+    // coordinates match mouse clientX/clientY exactly.
+    viewW = window.innerWidth;
+    viewH = window.innerHeight;
+    canvas.style.width = viewW + 'px';
+    canvas.style.height = viewH + 'px';
+    canvas.width = viewW * dpr;
+    canvas.height = viewH * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas, { passive: true });
+
+  let lastX = 0, lastY = 0;       // last particle spawn point
+  let started = false;
+  let rafId = null;
+
+  const particles = [];
+  const MAX_PARTICLES = 90;
+  const SPAWN_DISTANCE = 22;      // px of travel per particle
+
+  const spawnParticle = (x, y) => {
+    if (particles.length >= MAX_PARTICLES) particles.shift();
+    particles.push({
+      x: x,
+      y: y,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5 - 0.15,
+      size: 0.8 + Math.random() * 1.4,
+      life: 1,
+      decay: 0.008 + Math.random() * 0.012,
+    });
+  };
+
+  const tick = () => {
+    ctx.clearRect(0, 0, viewW, viewH);
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
+      const alpha = 0.45 * p.life * p.life;  // ease-out fade
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 205, 60, ${alpha})`;
+      ctx.fill();
+    }
+
+    rafId = particles.length > 0 ? requestAnimationFrame(tick) : null;
+  };
+
+  window.addEventListener('mousemove', e => {
+    if (!started) {
+      started = true;
+      lastX = e.clientX;
+      lastY = e.clientY;
+    }
+    // Walk along the path travelled since the last spawn, emitting evenly
+    // spaced particles, so fast moves leave a continuous trail from the tip.
+    let dx = e.clientX - lastX;
+    let dy = e.clientY - lastY;
+    let dist = Math.hypot(dx, dy);
+    while (dist >= SPAWN_DISTANCE) {
+      const t = SPAWN_DISTANCE / dist;
+      lastX += dx * t;
+      lastY += dy * t;
+      spawnParticle(lastX, lastY);
+      dx = e.clientX - lastX;
+      dy = e.clientY - lastY;
+      dist = Math.hypot(dx, dy);
+    }
+    if (particles.length && !rafId) rafId = requestAnimationFrame(tick);
+  }, { passive: true });
+}
+
 // ---------- Language bar fill on scroll ----------
 const langFills = document.querySelectorAll('.lang-fill');
 const langObs = new IntersectionObserver(entries => {
